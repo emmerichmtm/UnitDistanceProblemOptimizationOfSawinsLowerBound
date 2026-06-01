@@ -1,0 +1,36 @@
+==============================================================================
+Sawin published example
+D = 6541380665835015
+R = 72
+budget = 36 <= 36
+delta = 0.0141144286784982388940007919697305902244653058836421864380197699367667273834029943082677080
+passed = True
+checks:
+  - T_all_prime: True
+  - S_Q_all_prime: True
+  - T_all_odd: True
+  - T_has_odd_number_3_mod_4: True
+  - k_positive_for_all_S_Q: True
+  - R_greater_than_1: True
+  - no_split_primes_in_S_Q: True
+  - budget_satisfied: True
+  - admissibility_witnesses_found: True
+
+==============================================================================
+Optimized candidate
+D = 6541380665835015
+R = 66.72240803
+budget = 36 <= 36
+delta = 0.0151718056372132585440311127392966665768554954467520449136299291221068996522831617017309215
+passed = True
+checks:
+  - T_all_prime: True
+  - S_Q_all_prime: True
+  - T_all_odd: True
+  - T_has_odd_number_3_mod_4: True
+  - k_positive_for_all_S_Q: True
+  - R_greater_than_1: True
+  - no_split_primes_in_S_Q: True
+  - budget_satisfied: True
+  - admissibility_witnesses_found: True
+
