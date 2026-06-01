@@ -10,6 +10,7 @@ The code verifies two finite certificates:
 
 1. **Sawin's published example**, used as a validation target for the verification pipeline.
 2. **An optimized candidate**, which passes the implemented arithmetic checks and gives
+3. **Optimization Pipeline with Greedy Optimizer**, can be used or modified to "hunt" for higher lower bounds.
 
 ```text
 delta = 0.01517180563721325...
