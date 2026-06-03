@@ -25,8 +25,6 @@ for arbitrarily large `n`. The sharper decimal value should be checked independe
 
 ## Files
 
-- `unit_distance_optimization_report_v15.tex` — LaTeX source for the report.
-- `unit_distance_optimization_report_v15.pdf` — compiled report.
 - `verify_certificates.py` — verifies Sawin's published certificate and the optimized certificate.
 - `optimize_certificates.py` — verifies the built-in examples and runs a deterministic greedy parameter search.
 - `coordinate_pipeline_attempt.py` — records why the finite certificate does not by itself yield planar coordinates.
@@ -102,8 +100,6 @@ For each certificate, the verifier checks:
 ## Coordinate realization
 
 The repository does **not** construct actual planar coordinates for the optimized algebraic candidate. The finite tuple `(T, S_Q, k, R)` is sufficient for the implemented certificate verification but does not specify an explicit finite class-field-tower level, integral basis, ideals, embeddings, normalization, or bounded window. Those data would be needed for a literal coordinate plot in `[-10,10]^2`.
-
-The file `explicit_planar_comparator.py` is included only as a genuine elementary coordinate comparator. It is not the optimized Sawin-style construction.
 
 ## Rudolph-style integer evolutionary search
 
