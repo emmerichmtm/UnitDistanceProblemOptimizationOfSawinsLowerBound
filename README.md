@@ -145,12 +145,12 @@ The recorded run found a small improvement over the non-recombining integer ES:
 A self-adaptive mutation-rate variant was also tested but was not retained as the main result, since it appeared to converge prematurely and did not improve the certificate.
 
 
-## Additional v23 verification
+## Additional verification of integer ES results
 
 Run the full four-certificate verification with:
 
 ```bash
-python verify_all_certificates_v23.py
+python verify_all_certificates.py
 ```
 
 This checks Sawin, the greedy certificate, the simple Rudolph-style integer ES certificate, and the discrete-recombination variant.
