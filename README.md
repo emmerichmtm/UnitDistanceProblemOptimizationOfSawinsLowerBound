@@ -10,7 +10,8 @@ The code verifies four finite certificates:
 
 1. **Sawin's published example**, used as a validation target for the verification pipeline.
 2. **An optimized candidate**, based on the greedy pipeline
-3. **Tailored Integer ES Optimization" 
+3. **Tailored Integer ES Optimization** implementing a Rudolph-style Integer ES
+4. **Tailored Integer ES Optimization with Recombination** found by a Rudolph-style Integer ES with discrete recombination 
 
 Subject to Sawin's explicit criterion being applied exactly as cited in the report, this supports the cautious clean statement
 
