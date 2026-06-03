@@ -25,10 +25,11 @@ for arbitrarily large `n`. The sharper decimal value should be checked independe
 
 ## Files
 
-- `verify_certificates.py` — verifies Sawin's published certificate and the optimized certificate.
-- `optimize_certificates.py` — verifies the built-in examples and runs a deterministic greedy parameter search.
-- `coordinate_pipeline_attempt.py` — records why the finite certificate does not by itself yield planar coordinates.
-- `explicit_planar_comparator.py` — counts a classical explicit planar comparator based on squared length `5`.
+- '2606.03419v1.pdf' -- the accompanying Arxiv report
+-  `verify_certificates.py` -- verifies Sawin's published certificate and the optimized certificate.
+- `optimize_certificates.py` -- verifies the built-in examples and runs a deterministic greedy parameter search.
+- `coordinate_pipeline_attempt.py` -- records why the finite certificate does not by itself yield planar coordinates.
+- `explicit_planar_comparator.py` -- counts a classical explicit planar comparator based on squared length `5`.
 
 ## Quick start
 
