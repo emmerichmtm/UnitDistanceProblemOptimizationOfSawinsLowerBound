@@ -10,7 +10,6 @@ The code verifies two finite certificates:
 
 1. **Sawin's published example**, used as a validation target for the verification pipeline.
 2. **An optimized candidate**, which passes the implemented arithmetic checks and gives
-3. **Optimization Pipeline with Greedy Optimizer**, can be used or modified to "hunt" for higher lower bounds.
 
 ```text
 delta = 0.01517180563721325...
@@ -105,3 +104,58 @@ For each certificate, the verifier checks:
 The repository does **not** construct actual planar coordinates for the optimized algebraic candidate. The finite tuple `(T, S_Q, k, R)` is sufficient for the implemented certificate verification but does not specify an explicit finite class-field-tower level, integral basis, ideals, embeddings, normalization, or bounded window. Those data would be needed for a literal coordinate plot in `[-10,10]^2`.
 
 The file `explicit_planar_comparator.py` is included only as a genuine elementary coordinate comparator. It is not the optimized Sawin-style construction.
+
+## Rudolph-style integer evolutionary search
+
+A separate flat-file script implements an integer-coded evolutionary search inspired by Rudolph's integer-programming EA:
+
+```bash
+python rudolph_integer_ea.py --generations 300 --mu 24 --lambda 160 --pmax 500 --seed 20260601 --r-den 100000
+```
+
+The mutation operator is integer-native, using a two-sided geometric / discrete-Laplace step distribution. The real parameter is represented rationally as `R_num / R_den`, so the full evolutionary state is integer-coded.
+
+The bundled run compares three certificates:
+
+- Sawin published example: `delta ≈ 0.0141144286784982`
+- previous greedy/optimized candidate: `delta ≈ 0.0151718056372133`
+- Rudolph-style integer EA candidate: `delta ≈ 0.0152616610684193`
+
+See `RUDOLPH_INTEGER_EA.md`, `rudolph_integer_ea_results.txt`, and `rudolph_integer_ea_results.json` for details.
+
+
+## Version note
+
+This v21 bundle intentionally uses the simpler Rudolph-style integer evolutionary search that produced the certificate with
+
+```text
+rho delta = 0.0152616610684193...
+```
+
+The later self-adaptive mutation-rate experiment is not used in the report, because it did not provide a meaningful methodological improvement for the paper.
+
+## Discrete recombination variant
+
+The file `rudolph_integer_es_discrete_recombination.py` tests a two-parent discrete-recombination variant of the Rudolph-style integer ES. Run:
+
+```bash
+python rudolph_integer_es_discrete_recombination.py
+```
+
+The recorded run found a small improvement over the non-recombining integer ES:
+
+- simple Rudolph-style integer ES: `delta ≈ 0.0152616610684193`
+- discrete-recombination variant: `delta ≈ 0.0152628688170072`
+
+A self-adaptive mutation-rate variant was also tested but was not retained as the main result, since it appeared to converge prematurely and did not improve the certificate.
+
+
+## Additional v23 verification
+
+Run the full four-certificate verification with:
+
+```bash
+python verify_all_certificates_v23.py
+```
+
+This checks Sawin, the greedy certificate, the simple Rudolph-style integer ES certificate, and the discrete-recombination variant.
