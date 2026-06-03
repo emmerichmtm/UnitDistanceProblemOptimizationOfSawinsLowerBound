@@ -6,14 +6,11 @@ The repository is intentionally flat: all scripts and documents live in the root
 
 ## Main contribution
 
-The code verifies two finite certificates:
+The code verifies four finite certificates:
 
 1. **Sawin's published example**, used as a validation target for the verification pipeline.
-2. **An optimized candidate**, which passes the implemented arithmetic checks and gives
-
-```text
-delta = 0.01517180563721325...
-```
+2. **An optimized candidate**, based on the greedy pipeline
+3. **Tailored Integer ES Optimization" 
 
 Subject to Sawin's explicit criterion being applied exactly as cited in the report, this supports the cautious clean statement
 
@@ -25,7 +22,7 @@ for arbitrarily large `n`. The sharper decimal value should be checked independe
 
 ## Files
 
-- '2606.03419v1.pdf' -- the accompanying Arxiv report
+- `2606.03419v1.pdf` -- the accompanying Arxiv report
 -  `verify_certificates.py` -- verifies Sawin's published certificate and the optimized certificate.
 - `optimize_certificates.py` -- verifies the built-in examples and runs a deterministic greedy parameter search.
 - `coordinate_pipeline_attempt.py` -- records why the finite certificate does not by itself yield planar coordinates.
