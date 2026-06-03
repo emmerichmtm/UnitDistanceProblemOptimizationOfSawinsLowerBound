@@ -1,0 +1,18 @@
+Rudolph-style integer ES with discrete recombination
+====================================================
+Sawin published delta:          0.0141144286784982388940007919697305902244653058836421864380197699367667273834029943082677080
+Greedy/optimized delta:         0.0151718056372132585440311127392966665768554954467520449136299291221068996522831617017309215
+Simple Rudolph integer ES:      0.0152616610684192942425450138731409223894393631967856067120539712741573810118422083384893589
+Discrete recombination best:    0.0152628688170071916614619116129928378772275357640961301938241837638230203241670352067285620
+Improvement over simple ES:      0.0000012077485878974189168977398519154877881725673105234817702124896656393123248268682392031
+Improved over simple ES?         True
+
+Best discrete-recombination certificate:
+R = 66.72416
+S_Q = [2, 3, 5, 47, 71, 79, 97, 101, 107, 109, 139, 151, 163, 167, 179, 191, 211, 223, 239, 241, 251, 263]
+k = {'2': 49, '3': 29, '5': 19, '47': 8, '71': 7, '79': 7, '97': 6, '101': 6, '107': 6, '109': 6, '139': 6, '151': 6, '163': 5, '167': 6, '179': 5, '191': 5, '211': 5, '223': 5, '239': 5, '241': 5, '251': 5, '263': 5}
+
+Interpretation:
+Discrete recombination was tested as an additional operator. If it does not improve
+the simple Rudolph-style integer ES baseline, it should be reported as a negative
+algorithmic experiment rather than as the main result.
