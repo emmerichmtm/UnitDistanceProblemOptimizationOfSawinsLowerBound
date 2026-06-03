@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify all certificate levels reported in the v23 report.
+"""Verify certificate levels found by integer ES.
 
 This script is intentionally flat and dependency-free.  It imports the reusable
 verification routines from verify_certificates.py and checks four certificates:
