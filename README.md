@@ -150,7 +150,7 @@ A self-adaptive mutation-rate variant was also tested but was not retained as th
 Run the full four-certificate verification with:
 
 ```bash
-python verify_all_certificates.py
+python verify_all_certificates_integer_evolution_strategy.py
 ```
 
 This checks Sawin, the greedy certificate, the simple Rudolph-style integer ES certificate, and the discrete-recombination variant.
